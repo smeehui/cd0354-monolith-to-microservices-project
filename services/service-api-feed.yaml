@@ -9,4 +9,4 @@ spec:
     - port: 80
       protocol: TCP
   selector:
-    run: udagram-api-feed
+    app: udagram-api-feed

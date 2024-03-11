@@ -9,4 +9,4 @@ spec:
     - port: 80
       protocol: TCP
   selector:
-    run: udagram-reverseproxy
+    app: udagram-reverseproxy

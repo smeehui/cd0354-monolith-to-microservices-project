@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: udagram-reverseproxy
-          image: juniornguyen/udagram-reverseproxy
+          image: "juniornguyen/udagram-reverseproxy:v1"
           ports:
             - containerPort: 80
