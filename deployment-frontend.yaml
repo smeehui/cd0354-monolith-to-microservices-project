@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: udagram-frontend
-          image: juniornguyen/udagram
+          image: juniornguyen/udagram-frontend
           ports:
-            - containerPort: 8081
+            - containerPort: 8100

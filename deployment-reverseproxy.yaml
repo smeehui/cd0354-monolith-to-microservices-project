@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: udagram-reverseproxy
-          image: nginx:1.7.9
+          image: juniornguyen/udagram-reverseproxy
           ports:
             - containerPort: 80
