@@ -6,7 +6,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 ## Bundle app source
 COPY . .
-RUN echo -a '['$AWS_PROFILE']'>> ~/.aws/credentials &&\
+RUN mkdir ~/.aws &&\
+    echo -a '['$AWS_PROFILE']'>> ~/.aws/credentials &&\
     echo -a 'aws_access_key_id = '$AWS_ACESS_KEY_ID >> ~/.aws/credentials &&\
     echo -a 'aws_secret_access_key = '$AWS_SECRET_ACCESS_KEY >> ~/.aws/credentials
 EXPOSE 8080
