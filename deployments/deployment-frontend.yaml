@@ -19,3 +19,16 @@ spec:
           image: "juniornguyen/udagram-frontend:v1"
           ports:
             - containerPort: 8100
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
+          envFrom:
+            - secretRef:
+                name: postgres-secret
+            - secretRef:
+                name: aws-secret
+            - configMapRef:
+                name: udagram-config-map
