@@ -15,7 +15,7 @@ script:
   - docker tag udagram-api-feed juniornguyen/udagram-api-feed:v1
   - docker tag udagram-api-user juniornguyen/udagram-api-user:v1
   - docker tag udagram-frontend juniornguyen/udagram-frontend:v1
-  - docker tag udagram-reverseproxy juniornguyen/reverseproxy:v1
+  - docker tag udagram-reverseproxy juniornguyen/udagram-reverseproxy:v1
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   ## Push
