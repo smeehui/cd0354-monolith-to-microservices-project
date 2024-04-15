@@ -18,7 +18,7 @@ spec:
         - name: udagram-api-feed
           image: "juniornguyen/udagram-api-feed:v1"
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           imagePullPolicy: Always
           resources:
             requests:
