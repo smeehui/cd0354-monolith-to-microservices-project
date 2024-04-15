@@ -9,7 +9,7 @@ services:
   - docker
 
 script:
-  ## Build
+  ## Build docker
   - docker-compose -f docker-compose-build.yaml build
   ## Tagging
   - docker tag udagram-api-feed juniornguyen/udagram-api-feed:v1
