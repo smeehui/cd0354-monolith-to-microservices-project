@@ -8,7 +8,8 @@ COPY package*.json ./
 RUN npm ci
 ## Bundle app source
 COPY . .
-RUN ionic build
+RUN ionic build &&\
+    printf "server {\n\tlisten 81;\n}" > conf.txt
 ### Run
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
