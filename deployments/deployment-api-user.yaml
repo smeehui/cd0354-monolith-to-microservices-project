@@ -32,3 +32,11 @@ spec:
                 name: aws-secret
             - configMapRef:
                 name: udagram-config-map
+          volumeMounts:
+            - mountPath: "/root/.aws/"
+              name: aws-secret
+              readOnly: true
+      volumes:
+        - name: aws-secret
+          secret:
+            secretName: aws-secret

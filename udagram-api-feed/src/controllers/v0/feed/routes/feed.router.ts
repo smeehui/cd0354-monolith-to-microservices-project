@@ -29,6 +29,7 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
 // Get all feed items
 router.get('/', async (req: Request, res: Response) => {
     const items = await FeedItem.findAndCountAll({order: [['id', 'DESC']]});
+    console.info(`Get all feed items`)
     items.rows.map((item) => {
         if (item.url) {
             item.url = AWS.getGetSignedUrl(item.url);
@@ -84,6 +85,7 @@ router.post('/',
         const savedItem = await item.save();
 
         savedItem.url = AWS.getGetSignedUrl(savedItem.url);
+        console.info(`New post created, id: ${savedItem.id}`)
         res.status(201).send(savedItem);
     });
 
